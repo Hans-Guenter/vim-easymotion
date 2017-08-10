@@ -144,6 +144,7 @@ function! s:search.on_leave(cmdline) "{{{
     if g:EasyMotion_cursor_highlight
         call EasyMotion#highlight#delete_highlight(g:EasyMotion_hl_inc_cursor)
     endif
+    call EasyMotion#helper#VarReset('&scrolloff')
 endfunction "}}}
 function! s:search.on_char(cmdline) "{{{
     if s:num_strokes == -1
